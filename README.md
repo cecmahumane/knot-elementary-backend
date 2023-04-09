@@ -1,2 +1,2 @@
-# meetings-with-emma-be
+# knot-elementary-backend
 Backend services
