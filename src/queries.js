@@ -5,7 +5,7 @@ class testDatabaseQueriesClass {
 }
 
 class roleDatabaseQueriesClass {
-    getPersonRole = "SELECT name FROM role INNER JOIN person ON role.id = person.role_id WHERE person.email = $1"
+    getPersonRole = "SELECT role_id, email, name, person.id FROM role INNER JOIN person ON role.id = person.role_id"
 }
 
 const testDatabaseQueries = new testDatabaseQueriesClass();

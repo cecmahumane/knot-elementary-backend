@@ -4,15 +4,14 @@ const pool = require("../Config/DatabaseConfig");
 const queries = require("../queries");
 
 roleRouter.get("/", async (req, res, next) => {
-    console.log("Route hit");
+    console.log("Role Route hit");
     try {
-        const data = await pool.query(queries.roleDatabaseQueries.getPersonRole, [req.body.email]);
+        const data = await pool.query(queries.roleDatabaseQueries.getPersonRole);
         // console.log(data)
-        return res.send(data.rows);
+        res.send(data.rows);
     } catch (error) {
         
     }
-    res.send(JSON.stringify("<---Server is working--->"));
 });
 
 module.exports = roleRouter;

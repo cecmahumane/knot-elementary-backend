@@ -4,7 +4,7 @@ const pool = require("../Config/DatabaseConfig");
 const queries = require("../queries");
 
 testRouter.get("/", async (req, res, next) => {
-    console.log("Route hit");
+    console.log("Test Route hit");
     res.send(JSON.stringify("<---Server is working--->"));
 });
 
